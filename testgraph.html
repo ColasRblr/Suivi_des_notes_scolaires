@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Exemple de graphique en barre avec Chart.js</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.umd.min.js"
+    integrity="sha512-GCiwmzA0bNGVsp1otzTJ4LWQT2jjGJENLGyLlerlzckNI30moi2EQT0AfRI7fLYYYDKR+7hnuh35r3y1uJzugw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+  <canvas id="myChart"></canvas>
+
+  <script type="module">
+    import { mathClassAverage, frenchClassAverage, historyClassAverage, physicalClassAverage, englishClassAverage } from './js/controller.js';
+    let mathAverage = mathClassAverage();
+    let frenchAverage = frenchClassAverage();
+    let historyAverage = historyClassAverage();
+    let physiqueAverage = physicalClassAverage();
+    let englishAverage = englishClassAverage();
+    mathAverage.then((res) => {
+      arrayAverage.push(res);
+    });
+    frenchAverage.then((res) => {
+      arrayAverage.push(res);
+    });
+    historyAverage.then((res) => {
+      arrayAverage.push(res);
+    });
+    physiqueAverage.then((res) => {
+      arrayAverage.push(res);
+    });
+    englishAverage.then((res) => {
+      arrayAverage.push(res);
+    });
+    async function createChart() {
+      const mathAverage = await mathClassAverage();
+      const frenchAverage = await frenchClassAverage();
+      const historyAverage = await historyClassAverage();
+      const physicalAverage = await physicalClassAverage();
+      const englishAverage = await englishClassAverage();
+
+      const ctx = document.getElementById('myChart').getContext('2d');
+
+      const chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Mathématiques', 'Français', 'Histoire', 'Physique', 'Anglais'],
+          datasets: [{
+            label: 'Moyenne de l\'élève',
+            data: arrayAverage,
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(255, 99, 132, 0.2)',
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+            ],
+            borderWidth: 2,
+            borderRadius: 5,
+          }, {
+            label: 'Moyennes de la classe',
+            data: [mathAverage, frenchAverage, historyAverage, physicalAverage, englishAverage],
+            backgroundColor: [
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+            ],
+            borderWidth: 2,
+            borderRadius: 5,
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+
+    createChart();
+
+  </script>
+
+
+</body>
+
+</html>

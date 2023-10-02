@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "firstname": "Mathieu",
+        "lastname": "Chedid",
+        "class": "6ème3",
+        "email": "mathieu.chedid@yahoo.fr",
+        "password": "pythagore",
+        "picture": "../assets/boy1.jpg"
+    },
+    {
+        "id": 2,
+        "firstname": "Julie",
+        "lastname": "Grasset",
+        "class": "6ème 3",
+        "email": "julie.grasset@yahoo.fr",
+        "password": "piano",
+        "picture": "../assets/girl1.jpg"
+    },
+    {
+        "id": 3,
+        "firstname": "Tom",
+        "lastname": "Sawyer",
+        "class": "6ème 3",
+        "email": "tom.sawyer@yahoo.fr",
+        "password": "aventure",
+        "picture": "../assets/boy2.jpg"
+    },
+    {
+        "id": 4,
+        "firstname": "Marina",
+        "lastname": "Azira",
+        "class": "6ème 3",
+        "email": "marine.azira@yahoo.fr",
+        "password": "clown",
+        "picture": "../assets/girl2.jpg"
+    },
+    {
+        "id": 5,
+        "firstname": "Nadia",
+        "lastname": "Marin",
+        "class": "6ème 3",
+        "email": "nadia.marin@yahoo.fr",
+        "password": "chimie",
+        "picture": "../assets/girl3.jpg"
+    },
+    {
+        "id": 6,
+        "firstname": "Henri",
+        "lastname": "James",
+        "class": "6ème 3",
+        "email": "henri.james@yahoo.fr",
+        "password": "echecs",
+        "picture": "../assets/boy3.jpg"
+    },
+    {
+        "id": 7,
+        "firstname": "Carla",
+        "lastname": "Antonino",
+        "class": "6ème 3",
+        "email": "carla.antonino@yahoo.fr",
+        "password": "sport",
+        "picture": "../assets/girl4.jpg"
+    },
+    {
+        "id": 8,
+        "firstname": "Abel",
+        "lastname": "Zohra",
+        "class": "6ème 3",
+        "email": "abel.zohra@yahoo.fr",
+        "password": "lecture",
+        "picture": "../assets/boy4.jpg"
+    },
+    {
+        "id": 9,
+        "firstname": "Mélodie",
+        "lastname": "Armand",
+        "class": "6ème 3",
+        "email": "melodie.armand@yahoo.fr",
+        "password": "jeux",
+        "picture": "../assets/girl5.jpg"
+    },
+    {
+        "id": 10,
+        "firstname": "Alban",
+        "lastname": "Denisot",
+        "class": "6ème 3",
+        "email": "alban.denisot@yahoo.fr",
+        "password": "dessin",
+        "picture": "../assets/boy5.jpg"
+    },
+    {
+        "id": 11,
+        "firstname": "Amelle",
+        "lastname": "Azedine",
+        "class": "6ème 3",
+        "email": "amelle.azedine@yahoo.fr",
+        "password": "informatique",
+        "picture": "../assets/girl6.jpg"
+    },
+    {
+        "id": 12,
+        "firstname": "Ashton",
+        "lastname": "Jameson",
+        "class": "6ème 3",
+        "email": "ashton.jameson@yahoo.fr",
+        "password": "anglais",
+        "picture": "../assets/boy6.jpg"
+    },
+    {
+        "id": 13,
+        "firstname": "Susan",
+        "lastname": "Olivier",
+        "class": "6ème 3",
+        "email": "susan.olivier@yahoo.fr",
+        "password": "foot",
+        "picture": "../assets/girl7.jpg"
+    },
+    {
+        "id": 14,
+        "firstname": "Margot",
+        "lastname": "Tanguy",
+        "class": "6ème 3",
+        "email": "margot.tanguy@yahoo.fr",
+        "password": "gym",
+        "picture": "../assets/girl8.jpg"
+    },
+    {
+        "id": 15,
+        "firstname": "Grégoire",
+        "lastname": "Gosselin",
+        "class": "6ème 3",
+        "email": "gregoire.gosselin@yahoo.fr",
+        "password": "art",
+        "picture": "../assets/boy7.jpg"
+    },
+    {
+        "id": 16,
+        "firstname": "Nicole",
+        "lastname": "Cordier",
+        "class": "6ème 3",
+        "email": "nicole.cordier@yahoo.fr",
+        "password": "boxe",
+        "picture": "../assets/girl9.jpg"
+    },
+    {
+        "id": 17,
+        "firstname": "Charles",
+        "lastname": "Briand",
+        "class": "6ème 3",
+        "email": "charles.briand@yahoo.fr",
+        "password": "technologie",
+        "picture": "../assets/boy8.jpg"
+    },
+    {
+        "id": 18,
+        "firstname": "Cécile",
+        "lastname": "Bonnet",
+        "class": "6ème 3",
+        "email": "cecile.bonnet@yahoo.fr",
+        "password": "tricot",
+        "picture": "../assets/girl10.avif"
+    },
+    {
+        "id": 19,
+        "firstname": "Christophe",
+        "lastname": "Hubert",
+        "class": "6ème 3",
+        "email": "christophe.hubert@yahoo.fr",
+        "password": "cirque",
+        "picture": "../assets/boy9.jpg"
+    },
+    {
+        "id": 20,
+        "firstname": "Margaret",
+        "lastname": "Lebrun",
+        "class": "6ème 3",
+        "email": "margaret.lebrun@yahoo.fr",
+        "password": "voile",
+        "picture": "../assets/girl11.jpg"
+    }
+]

@@ -1,0 +1,51 @@
+[{
+"id":1,
+"firstname":"Jacques",
+"lastname":"Dupont",
+"subject":"Mathématiques",
+"students_list":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
+"email":"jacques.dupont@yahoo.fr",
+"password":"pythagore",
+"picture" :"./assets/teacher1.jpg"
+},
+{
+"id" : 2,
+"firstname" : "Martin",
+"lastname" : "English",
+"subject" : "Anglais",
+"students_list" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+"email" : "martin.dupont@yahoo.fr",
+"password" : "martinDupont",
+"picture" :"./assets/teacher2.jpg"
+},
+{
+"id" : 3,
+"firstname" : "Marie",
+"lastname" : "Durand",
+"subject" : "Français",
+"students_list" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+"email" : "Marie.Durand@yahoo.fr",
+"password" : "marieDurant",
+"picture" :"./assets/teacher3.jpg"
+},
+
+{
+"id" : 4,
+"firstname" : "Nicolas",
+"lastname" : "Martinez",
+"subject" : "Histoire",
+"students_list" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+"email" : "nicolas.martinez@yahoo.fr",
+"password" : "nicolasMartinez",
+"picture" :"./assets/teacher5.jpg"
+},
+{
+"id" : 5,
+"firstname" : "Sophie",
+"lastname" : "Lemaire",
+"subject" : "Physique",
+"students_list" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+"email" : "sophie.lemaire@yahoo.fr",
+"password" : "sophieLemaire",
+"picture" :"./assets/teacher4.jpg"
+}]

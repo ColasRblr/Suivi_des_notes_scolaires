@@ -1,0 +1,38 @@
+#connect-teacher-btn, #connect-student-btn {
+
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
+	background: white;
+	border: 1px solid #8d9dbf;
+	box-shadow: 3px 3px 0 #8d9dbf,
+		-3px -3px 0 #8d9dbf,
+		-3px 3px 0 #8d9dbf,
+		3px -3px 0 #8d9dbf;
+	transition: 500ms ease-in-out;
+}
+
+#connect-teacher-btn:hover, #connect-student-btn:hover {
+	box-shadow: 20px 5px 0 #8d9dbf, -20px -5px 0 #8d9dbf;
+    background: #495eb3;
+    color: white;
+}
+
+#connect-teacher-btn:focus, #connect-student-btn:focus {
+	outline: none;
+}
+
+.choice .filter-switch label {
+	cursor: pointer;
+  }
+ .choice .filter-switch-item input:checked + label {
+	color: inherit;
+  }
+ .choice .filter-switch-item input:not(:checked) + label {
+	--bg-opacity: 0;
+	box-shadow: none;
+  }
+.choice a {
+	text-decoration: none;
+	color: white;
+}

@@ -1,0 +1,132 @@
+/* MODAL DETAIL GRADES */
+* {
+    box-sizing: border-box;
+}
+:root {
+    --background: #f7f0f0;
+    --primary: #495eb3;
+    --secondary: #8fa7ce;
+    --tertiary: #8d9dbf;
+}
+.modal-content {
+    box-shadow: 10px 5px 5px black;
+}
+.modal-header {
+background: var(--primary);
+}
+
+.modal-body {
+    background: var(--secondary);
+    overflow: hidden;
+}
+
+.modal-body .tape-section {
+    position:absolute;
+    width: 100%;
+}
+.modal-body .tape-section:first-of-type {
+    top: 0;
+}
+.modal-body .tape-section:last-of-type {
+    bottom: 0;
+}
+.modal-body .tape-section::before, .tape-section::after {
+    content: "";
+    width: 10vmin;
+    height: 4vmin;
+    position: absolute;
+    background-color: #dbd8be;
+    border-right: 1px dotted #b7b49d;
+    border-left: 1px dotted #b7b49d;
+    opacity: 0.5;
+}
+.modal-body .tape-section:last-of-type::after {
+    transform: rotate(-45deg);
+    right: -4vmin;
+    bottom: 0;
+    
+}
+.modal-body .tape-section:first-of-type::before {
+    transform: rotate(-45deg);
+    left: -4vmin;
+    top: 1vmin;
+    z-index: 1;
+}
+.modal-body .tape-section:first-of-type::after {
+    transform: rotate(45deg);
+    right: 0;
+    top:1vmin;
+    z-index: 1;
+}
+.modal-body .tape-section:last-of-type::before {
+    transform: rotate(45deg);
+    left: -4vmin;
+    bottom: 0;
+}
+.modal-body .card-details {
+    padding: 1rem;
+    box-shadow: 2px 2px 5px black;
+}
+
+.modal-body .bi-book {
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+}
+
+.modal-body .card-about {
+    margin-top: 1rem;
+    display: grid;
+    grid-auto-flow: column;
+}
+.modal-body .card-about-teacher {
+    margin-top: 1rem;
+    display: grid;
+    grid-auto-flow: column;
+    display: flex;
+    flex-direction: column;
+}
+.modal-body .item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+.modal-body .item .value {
+    font-size: 1rem;
+}
+.modal-body .item .label {
+    margin-top: 0.15rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+.modal-body .comment {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.75rem;
+}
+.modal-body .comment .label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+.modal-body .comment .value {
+    margin-top: 0.15rem;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+textarea {
+    resize: none;
+  }
+/* END MODAL DETAIL GRADES */
+
+/* MODIF FORM */
+
+#modifForm {
+    display:none;
+}
+
+.form {
+    margin-left: 5px;
+    width : 300px;
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="/styles/modal.css">
+    <link rel="stylesheet" href="/styles/student.css">
+    <link rel="stylesheet" href="/styles/extensions.css">
+    <link rel="stylesheet" href="/styles/stylebutton.css">
+    <link rel="icon" href="/assets/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" src="index.js"></script>
+    <title>Student page</title>
+</head>
+
+<body class="min-vh-100">
+
+
+    <header class="d-flex justify-content-between align-items-center p-2">
+        <img src="./assets/logo.png" alt="logoSite" class="logo">
+
+        <div class="transparent_bg d-flex h-25 px-4 py-2 align-items-center justify-content-between">
+            <p id="motto" class="text-light"> Discere fasciendo est vera doctrina</p>
+            <div id="picAndLogout">
+            </div>
+        </div>
+        <div class="choice d-flex flex-column align-items-center py-5" id="teacherButtonHeader">
+                <!-- Radio buttons injected dynamically if teacher is connected -->
+            </div>
+
+        <button id="logoutBtn">
+            <i class="bi bi-x-circle-fill text-danger" class="img-fluid" style="font-size:40px"></i>
+        </button>
+    </header>
+
+    <!-- Scholar report -->
+
+    <h1 class="text-center my-4"></h1>
+
+    <div class="paper m-1 py-3">
+        <div class="paper paper--alt"></div>
+        <div class="containerTable p-1">
+            <div id="table_title" class="pinkLine d-flex justify-content-around p-3">
+                <div id="student-average"></div>
+                <!-- Vers modal -->
+
+                <button type="btn" id="btnAverageClass" data-bs-toggle="modal" data-bs-target="#modalAverages"
+                    data-classaverage="">Me situer dans la classe</button>
+
+            </div>
+            <table class="table">
+                <thead class="w-100">
+                    <tr class="whiteLine">
+                        <th scope="col">Disciplines</th>
+                        <th scope="col" id="coef">Coef</th>
+                        <th scope="col">Notes</th>
+                        <th scope="col" id="average">Moyennes</th>
+                        <th scope="col">Graphiques</th>
+                    </tr>
+                </thead>
+                <tbody id="studentReport" class="w">
+                    <!-- Scholar report dynamically inserted with JS -->
+                    <tr class="pinkLine maths" id="Mathématiques">
+                        <th scope="row">Mathématiques</th>
+                    </tr>
+                    <tr class="whiteLine french" id="Français">
+                        <th scope="row">Français</th>
+                    </tr>
+                    <tr class="pinkLine english" id="Anglais">
+                        <th scope="row">Anglais</th>
+                    </tr>
+                    <tr class="whiteLine physique" id="Physique">
+                        <th scope="row">Physique</th>
+                    </tr>
+                    <tr class="pinkLine history" id="Histoire">
+                        <th scope="row">Histoire</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Détails de l'évaluation</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        id="closeBtn"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="tape-section"></div>
+                    <div class="card">
+                        <div class="card-details" id="displayGrades">
+                            <i class="bi bi-book"></i>
+                            <div class="card-about" id="modal">
+                                <div class="item">
+                                    <span class="label">Type de l'évaluation</span>
+                                    <span class="value" id="type"> </span>
+                                </div>
+                                <div class="item">
+                                    <span class="label">Date</span>
+                                    <span class="value" id="date"> </span>
+                                </div>
+                                <div class="item">
+                                    <span class="label">Ma note</span>
+                                    <span class="value" id="grade"> </span>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <span class="label">Commentaire</span>
+                                <span class="value" id="comment"></span>
+                            </div>
+                            <div class="modal-footer" id="modalFooter">
+
+                                <!-- Update and delete buttons only displayed with JS if teacher is connected -->
+
+                            </div>
+
+                            <!-- MODIF FORM -->
+                            <form class="card-about" id="modifForm">
+                                <div class="item">
+                                    <label for="value" class="label form">Valeur</label>
+                                    <input id="newValue" type="text" class="form" value="">
+                                </div>
+                                <div class="item">
+                                    <label for="date" class="label form">Date</label>
+                                    <input id="newDate" type="text" class="form" value="">
+                                </div>
+                                <div class="item">
+                                    <label for="type" class="label form">Type</label>
+                                    <input id="newType" type="text" class="form" value="">
+                                </div>
+                                <div class="comment">
+                                    <label for="comment" class="label form">Commentaire</label>
+                                    <textarea rows="2" id="newComment" type="text" class="form"> </textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary modif-grade-confirm"
+                                        data-dismiss="modal"
+                                        onclick="return confirm('Etes-vous sûr de vouloir effectuer ces modifications ?')">Enregistrer
+                                        les modifications</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tape-section"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!--END MODAL DETAIL GRADE -->
+
+
+    <!-- MODAL STATISTIC AVERAGE BY SUBJECT-->
+    <!-- Modal -->
+    <div class="modal fade" id="staticSubject" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg w-lg-50">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div>
+                    <canvas id="myChart"></canvas>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- END MODAL STATISTIC BY SUBJECT -->
+
+    <!-- MODAL STATISTIC AVERAGE BY STUDENT-->
+    <!-- Modal -->
+    <div class="modal fade" id="modalAverages" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg w-lg-75">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div>
+                    <canvas id="myChart2"></canvas>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- END MODAL STATISTIC AVERAGE BY STUDENT-->
+
+
+        </div>
+    </div>
+</div>
+    <footer class="d-flex justify-content-around align-items-center">
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script type="module" src="./js/student.js"></script>
+    <!-- <script src="bundle.js"></script> -->
+
+    <!-- <script src="./js/modals.js" defer></script> -->
+
+</body>
+
+</html>

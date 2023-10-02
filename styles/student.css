@@ -1,0 +1,201 @@
+/* MAIN */
+
+body {
+    margin:auto;
+}
+
+    /* Notebook page effect */
+    a {
+        text-decoration: none;
+        color: black;
+    }
+        .paper {
+            background: rgba(230, 230, 230, 0.637);
+            box-shadow: 4px 4px 0 #00486b;
+            background-image: linear-gradient(90deg, #fff 12px, 0, #00486b 15px, 0, #1373a9 20px, 0, #fff 100%), radial-gradient(circle closest-side, rgba(255, 255, 255, 0) 88%, #fff 100%), radial-gradient(circle at 22px 8px, #1373a9 40%, #00486b 40%, #00486b 100%);
+            background-size: 32px 8px, 32px 16px, 32px 16px;
+            background-repeat: space no-repeat;
+        }
+        
+        .paper--alt {
+            z-index:2;
+            background-image: linear-gradient(90deg, #fff 12px, 0, #00486b 15px, 0, #1373a9 20px, 0, #fff 100%), radial-gradient(circle closest-side, rgba(255, 255, 255, 0) 88%, #fff 100%), radial-gradient(circle at 22px 8px, #1373a9 40%, #00486b 40%, #00486b 100%);
+            background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 21'%3E%3Cpath d='M20 0h-7v6.9a7.5 7.5 0 107 0V0z' fill='%231373A9'/%3E%3Cpath d='M13 0h3v6.9a7.5 7.5 0 002 14 7.5 7.5 0 01-9-7.4c0-2.9 1.6-5.4 4-6.6V0z' fill='%2300486B'/%3E%3C/svg%3E");
+        }
+        
+        /* Scholar report */
+        .falseLinks {
+            text-decoration: none;
+            color: black;
+            font-size: 15px;
+        }
+        
+        .falseLinks:hover {
+            text-decoration-line: underline;
+            color:#00486b;
+        }
+        
+        .whiteLine {
+        background-color: #fff;
+        }
+        
+        .pinkLine {
+            background-color: #DDB2A7;
+        }
+        .grades {
+            width: 30px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+     
+        .coef-content-math,
+        .coef-content-history,
+        .coef-content-english,
+        .coef-content-physique,
+        .coef-content-french
+        {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .coef-content-math span,
+        .coef-content-history span,
+        .coef-content-english span,
+        .coef-content-physique span,
+        .coef-content-french span {
+            margin: 3px auto;
+        }
+        
+        th {
+            text-align: center;
+        
+        }
+
+        /* Bouton Student */
+
+.paper--alt {
+    z-index: 2;
+    background-image: linear-gradient(90deg, #fff 12px, 0, #00486b 15px, 0, #1373a9 20px, 0, #fff 100%), radial-gradient(circle closest-side, rgba(255, 255, 255, 0) 88%, #fff 100%), radial-gradient(circle at 22px 8px, #1373a9 40%, #00486b 40%, #00486b 100%);
+    background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 21'%3E%3Cpath d='M20 0h-7v6.9a7.5 7.5 0 107 0V0z' fill='%231373A9'/%3E%3Cpath d='M13 0h3v6.9a7.5 7.5 0 002 14 7.5 7.5 0 01-9-7.4c0-2.9 1.6-5.4 4-6.6V0z' fill='%2300486B'/%3E%3C/svg%3E");
+}
+
+/* Scholar report */
+.falseLinks {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.falseLinks:hover {
+    text-decoration-line: underline;
+    color: #00486b;
+}
+
+.whiteLine {
+    background-color: #fff;
+}
+
+.pinkLine {
+    background-color: #DDB2A7;
+}
+
+.grades {
+    width: 30px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* .average-maths,
+.average-physique {
+    display: flex;
+} */
+
+.coef-content-math,
+.coef-content-history,
+.coef-content-english,
+.coef-content-physique,
+.coef-content-french {
+    display: flex;
+    flex-direction: column;
+}
+
+.coef-content-math span,
+.coef-content-history span,
+.coef-content-english span,
+.coef-content-physique span,
+.coef-content-french span {
+    margin: 3px auto;
+}
+
+th, td {
+    text-align: center;
+
+}
+
+.table {
+    border-bottom-color: transparent;
+}
+
+  .btn-progress {
+        
+        background: #ffc421;
+        border: 2px solid black;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+        transition: 500ms;
+    }
+    
+    .btn-progress:hover {
+        transform: translateY(1px);
+        box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+        box-shadow: inset 5px 5px 5px rgba(0,0,0,0.4);
+    }
+    
+    .btn-progress:focus {
+        outline: none;
+    }
+    
+    .marks {
+        cursor: pointer;
+    }
+
+/* Responsive */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    
+/* Styles pour cette Media Queries */
+
+    #coef {
+        display: none;
+    }
+
+    .coef-content-math,
+.coef-content-history,
+.coef-content-english,
+.coef-content-physique,
+.coef-content-french {
+    display: none;
+}
+
+#average {
+    display: none;
+}
+
+.average{
+    display: none;
+}
+
+.falseLinks {
+    display: none;
+}
+
+.item {
+ width:100px;
+}
+
+#newValue, #newDate, #newType, #newComment {
+    width: 250px;
+}
+
+}

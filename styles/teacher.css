@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: auto;
+    overflow-x: hidden;
+}
+
+#header-img {
+    width: 100%;
+}
+
+#students-cards-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    justify-content: space-around;
+}
+
+.cards {
+    width: 22%;
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px auto;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+  background: rgb(255, 255, 255);
+  color: rgb(25, 60, 77);
+  padding: 3ch;
+  border-radius: 2ch;
+  border: 1px solid rgb(212, 212, 212);
+}
+
+
+.cards img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.name {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 15px auto;
+    font-size: 20px;
+}
+
+.btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto;
+}
+
+.btn-container .add-btn {
+    background: #DDB2A7;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;  
+box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);
+transition: all 0.5s ease-in-out;
+}
+.btn-container .add-btn:hover {
+box-shadow: none;
+}
+.btn-container .grade-btn {
+    background: #8D9DBF;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);
+    transition: all 0.5s;
+}
+.btn-container .grade-btn:hover {
+    box-shadow: none;
+    }
+.btn-container .grade-btn a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@media (max-width:1100px) {
+    .cards {
+        width: 30%;
+    }
+}
+
+@media (max-width:900px) {
+
+    .cards {
+
+        width: 40%;
+    }
+}
+
+@media (max-width:720px) {
+    .cards {
+        width: 48%;
+    }
+}
+
+@media (max-width:600px) {
+    .cards {
+        width: 60%;
+    }
+}
+
+@media (max-width:500px) {
+    .cards {
+        width: 70%;
+    }
+}
+
+@media (max-width:420px) {
+    .cards {
+        width: 80%;
+    }
+}

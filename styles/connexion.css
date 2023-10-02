@@ -1,0 +1,313 @@
+@font-face {
+    font-family: 'craie';
+    src: url(/font/Chalk-hand-lettering-shaded_DEMO.otf);
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-image: url(/asset/pexels-oleksandr-pidvalnyi-2831794.jpg);
+}
+
+
+h1 {
+    position: absolute;
+    z-index: 1;
+    top: 5%;
+    font-size: 4rem;
+    font-family: 'craie';
+    font-weight: 500;
+    text-shadow: 1px 1px 2px pink;
+}
+
+.paper {
+    position: absolute;
+    top: -32px;
+    width: 80vw;
+    height: 700px;
+    margin: 2em auto;
+    background: rgba(230, 230, 230, 0.637);
+    box-shadow: 4px 4px 0 #00486b;
+    background-image: linear-gradient(90deg, #fff 12px, 0, #00486b 15px, 0, #1373a9 20px, 0, #fff 100%), radial-gradient(circle closest-side, rgba(255, 255, 255, 0) 88%, #fff 100%), radial-gradient(circle at 22px 8px, #1373a9 40%, #00486b 40%, #00486b 100%);
+    background-size: 32px 8px, 32px 16px, 32px 16px;
+    background-repeat: space no-repeat;
+    background-position: center top, center 6px, center 6px;
+}
+
+.paper--alt {
+    background-image: linear-gradient(90deg, #fff 12px, 0, #00486b 15px, 0, #1373a9 20px, 0, #fff 100%), radial-gradient(circle closest-side, rgba(255, 255, 255, 0) 88%, #fff 100%), radial-gradient(circle at 22px 8px, #1373a9 40%, #00486b 40%, #00486b 100%);
+    background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 21'%3E%3Cpath d='M20 0h-7v6.9a7.5 7.5 0 107 0V0z' fill='%231373A9'/%3E%3Cpath d='M13 0h3v6.9a7.5 7.5 0 002 14 7.5 7.5 0 01-9-7.4c0-2.9 1.6-5.4 4-6.6V0z' fill='%2300486B'/%3E%3C/svg%3E");
+    background-size: 2em 1.3125em;
+}
+
+
+.contain-card {
+    display: flex;
+}
+
+#error-msg {
+    color: red;
+    position: absolute;
+    z-index: 15;
+    margin-top: -30px;
+    text-align: center;
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    width: 550px;
+    height:350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.card .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card .circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #d83133;
+    clip-path: circle(50px at center);
+    transition: 0.5s;
+}
+
+.card:hover .circle::before {
+    background: #0065c3;
+    clip-path: circle(400px at center);
+}
+
+.card img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 330px;
+    border-radius: 20px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.card:hover img {
+    left: 75%;
+    height: 500px;
+}
+
+.card .content {
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 10px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card:hover .content {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card .content h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    line-height: 1em;
+    margin-bottom: 5px;
+}
+
+.card .content p {
+    color: #fff;
+}
+
+.card .content a {
+    position: relative;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    color: #111;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.card .content label {
+    color: #fff
+}
+
+@media (max-width:991px) {
+    h1 {
+        font-size:xx-large;
+    }
+    .containt-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .card {
+        max-width: 350px;
+        align-items: flex-start;
+        margin: 10px;
+    }
+
+    .card:hover {
+        height: 600px;
+    }
+    .card .circle .content {
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+    } 
+    .card .content {
+        width: 100%;
+        left: 0;
+        padding: 30px;
+    }
+
+    .card:hover img {
+        top: 70%;
+        left: 50%;
+        height: 300px;
+    }
+}
+
+@media (max-width:750px) {
+    .contain-card {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10%;
+    }
+    h1 {
+        font-size:xx-large;
+        top: 15px;
+    }
+    
+    .card {   
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .card .circle {
+       display: flex;
+       text-align: center;
+       background-color: #0065c3;
+       height: 80%;        
+    }
+    .card .circle .content {
+        display: flex;
+        flex-direction:column;
+    } 
+
+    .card .circle::before {
+        content: '';
+        background: #d83133;  
+        display: none;
+    }
+    
+    .card:hover .circle::before {
+        background: #0065c3;
+        clip-path: circle(10px at center);
+    }
+    .card:hover {
+        height: 350px;
+    }
+    .card img {
+        display: none; 
+    }
+    
+    .card .content {
+        padding: 20px;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .card:hover .content {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .card .content h2 {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        line-height: 1em;
+        margin-bottom: 5px;
+    }
+    
+    .card .content p {
+        color: #fff;
+    }
+    
+    .card .content a {
+        position: relative;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background: #fff;
+        color: #111;
+        margin-top: 10px;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    
+    .card .content label {
+        color: #fff
+    }
+}
+#connect-teacher-btn, #connect-student-btn {
+
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
+	background: white;
+	border: 1px solid #8d9dbf;
+	box-shadow: 3px 3px 0 #8d9dbf,
+		-3px -3px 0 #8d9dbf,
+		-3px 3px 0 #8d9dbf,
+		3px -3px 0 #8d9dbf;
+	transition: 500ms ease-in-out;
+}
+
+#connect-teacher-btn:hover, #connect-student-btn:hover {
+	box-shadow: 20px 5px 0 #8d9dbf, -20px -5px 0 #8d9dbf;
+    background: #495eb3;
+    color: white;
+}
+
+#connect-teacher-btn:focus, #connect-student-btn:focus {
+	outline: none;
+}

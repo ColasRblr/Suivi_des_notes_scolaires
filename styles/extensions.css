@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+header {
+    background-image: url(../assets/school-top.jpg);
+    background-position: right;
+    background-size: cover !important;
+    width:100% !important;
+    flex-wrap: nowrap;
+}
+
+.studentPicture {
+    border: solid red 2px;
+    width: 15%;
+    border-radius: 50%;
+}
+
+#motto {
+    font-family: 'Aboreto', cursive;
+    font-size: 25px;
+}
+
+#logoutBtn {
+    border: none;
+    background-color: transparent;
+}
+
+.transparent_bg {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    border: 1px solid;
+    width: 700px;
+}
+
+.logo {
+    height: 150px;
+}
+
+#picAndLogout img {
+    width: 120px;
+    margin-right: 100px;
+}
+
+#name-content {
+    text-align: center;
+    color: white;
+}
+
+#picAndLogout {
+    width: 120px;
+}
+
+footer {
+    background: url(../assets/school-bottom.jpg);
+    background-position: right;
+    background-size: cover;
+    height: 10vh;
+    width: 100vw !important;
+    flex-wrap: nowrap;
+}
+
+
+.footerText {
+    color: red;
+}
+
+/* Responsive */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 680px) {
+
+    /* Styles pour cette Media Queries */
+    header {
+        background-image: url(../assets/school-top.jpg);
+        background-position: right;
+        background-size: cover !important;
+        width:100% !important;
+        flex-wrap: nowrap;
+    }
+    
+    .studentPicture {
+        border: solid red 2px;
+        width: 10%;
+        border-radius: 50%;
+    }
+    .logo {
+    display: none !important;
+    }
+
+    #logoutBtn {
+        border: none;
+        background-color: transparent;
+    }
+    
+    .transparent_bg {
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 10px;
+        border: 1px solid;
+        width: 150px;
+        justify-content: center !important;
+
+    }
+    
+    .logo {
+        height: 150px;
+    }
+    
+    #picAndLogout img {
+        width: 250px;
+        margin-right: 20px;
+    }
+    
+    #name-content {
+        text-align: center;
+        color: white;
+    }
+    
+    #picAndLogout {
+        width: 100px;
+    }
+
+    #motto {
+        display:none !important;
+    }
+    
+    footer {
+        background: url(../assets/school-bottom.jpg);
+        background-position: right;
+        background-size: cover;
+        height: 10vh;
+        width: 100vw !important;
+        flex-wrap: nowrap;
+    }
+    
+}
